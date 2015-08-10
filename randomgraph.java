@@ -67,14 +67,10 @@ public class randomgraph {
         long endTime   = System.currentTimeMillis();
         long taskUserTimeNano    = getUserTime( ) - startUserTimeNano;
       	long totalTime = endTime - startTime;
+      	Runtime inst = Runtime.getRuntime();
+      	System.out.println("Used Memory: " + (inst.totalMemory() - inst.freeMemory()));
       	System.out.println("Wall time: " + totalTime);
       	System.out.println("CPU time: " + (taskUserTimeNano/1000000));
-
-      	/*Query q1 = 
-	    new Query( 
-	        "consult", 
-	        new Term[] {new Atom("dg.pl")} 
-	    );*/
 
 
 	}

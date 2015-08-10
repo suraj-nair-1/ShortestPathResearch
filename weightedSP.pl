@@ -1,10 +1,3 @@
-/*  File:    dijkstra_av.pl
-    Author:  Carlo,,,
-    Created: Aug  3 2012
-    Modified:Oct 28 2012
-    Purpose: learn graph programming with attribute variables
-*/
-
 /* Defines the fle as a module file - called dijkstra-av
  dijkstra_av/3 and dijkstra_edges/3 are predicate indicators*/
 :- module(dijkstra_av, [dijkstra_av/3,
@@ -25,6 +18,8 @@ dijkstra_av(Graph, Start, Solution) :-
           ), sol(Solution), true),
     statistics(runtime, Rtf),
     statistics(walltime, Wtf),
+    statistics(core, Mtf),
+    writef("Memory: %w\n", Mtf),
     writef("CPU Time: %w\n", Rtf),
     writef("Wall Time: %w\n", Wtf).
 
